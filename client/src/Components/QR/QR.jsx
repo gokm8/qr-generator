@@ -10,6 +10,11 @@ import { useState } from "react";
 
 function QR() {
     const [url, setUrl] = useState("");
+
+    const generateQrcode = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div>
             <Container sx={{ marginTop: 10 }}>
@@ -35,7 +40,8 @@ function QR() {
                             />
                             <Button
                                 variant="contained"
-                                sx={{ marginTop: 10, marginBottom: 20 }}>
+                                sx={{ marginTop: 10, marginBottom: 20 }}
+                                onClick={generateQrcode}>
                                 Generate QR Code
                             </Button>
                         </Grid>
